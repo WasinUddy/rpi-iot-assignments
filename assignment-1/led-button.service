@@ -1,0 +1,15 @@
+[Unit]
+Description=LED Button Control
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/rpi-iot-assignments/assignments-1
+ExecStart=/usr/bin/python3 /home/pi/rpi-iot-assignments/assignments-1/led_button.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
